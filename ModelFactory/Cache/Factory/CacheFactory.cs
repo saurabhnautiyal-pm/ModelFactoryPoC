@@ -45,9 +45,26 @@ namespace ModelFactory.Cache.Factory
 
         private TItem Create<TItem>(ICacheEntry arg) where TItem : IModel
         {
-            _container.TryGetValue(typeof(TItem), out var value);
-            ICacheEntryOption<TItem> cache = (ICacheEntryOption<TItem>) value?.Invoke();
-            return cache.Create(arg);
+            bool found = _container.TryGetValue(typeof(TItem), out var value);
+
+            if (found)
+            {
+                ICacheEntryOption<TItem> cache = (ICacheEntryOption<TItem>) value?.Invoke();
+                return cache.Create(arg);
+            }
+            else
+            {
+                foreach (KeyValuePair<Type, Func<ICacheItem>> item in _container)
+                {
+                    if (item.Key is TItem)
+                    {
+                        _container.Add(typeof(TItem) , item.Value);
+                        Create<TItem>(arg);
+                    }
+                }
+            }
+            
+            throw new Exception("Not found");
         }
 
     }
