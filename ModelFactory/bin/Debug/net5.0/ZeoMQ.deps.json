@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ZeoMQ/1.0.0": {
+        "dependencies": {
+          "clrzmq": "3.0.0-rc1"
+        },
+        "runtime": {
+          "ZeoMQ.dll": {}
+        }
+      },
+      "clrzmq/3.0.0-rc1": {
+        "runtime": {
+          "lib/net40/clrzmq.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.12310.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ZeoMQ/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "clrzmq/3.0.0-rc1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b02roCY7nV0BtONqWHLgUtoBE6y46QY4GkJAd/hkEQ44gnl/tcmwrm3qVTVraGbbm1uzm1vfQeVRdlYk2OhRLQ==",
+      "path": "clrzmq/3.0.0-rc1",
+      "hashPath": "clrzmq.3.0.0-rc1.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/bin/Debug/net5.0/ZeoMQ.deps.json
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/bin/Debug/net5.0/ZeoMQ.runtimeconfig.json
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/bin/Debug/net5.0/ZeoMQ.runtimeconfig.dev.json
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/bin/Debug/net5.0/ZeoMQ.dll
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/bin/Debug/net5.0/ref/ZeoMQ.dll
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/bin/Debug/net5.0/ZeoMQ.pdb
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/bin/Debug/net5.0/clrzmq.dll
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/obj/Debug/net5.0/ZeoMQ.csprojAssemblyReference.cache
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/obj/Debug/net5.0/ZeoMQ.GeneratedMSBuildEditorConfig.editorconfig
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/obj/Debug/net5.0/ZeoMQ.AssemblyInfoInputs.cache
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/obj/Debug/net5.0/ZeoMQ.AssemblyInfo.cs
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/obj/Debug/net5.0/ZeoMQ.csproj.CoreCompileInputs.cache
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/obj/Debug/net5.0/ZeoMQ.csproj.CopyComplete
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/obj/Debug/net5.0/ZeoMQ.dll
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/obj/Debug/net5.0/ref/ZeoMQ.dll
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/obj/Debug/net5.0/ZeoMQ.pdb
+/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ZeoMQ/obj/Debug/net5.0/ZeoMQ.genruntimeconfig.cache

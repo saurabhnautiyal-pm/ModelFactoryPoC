@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ModelFactory/ModelFactory.csproj": {}
+  },
+  "projects": {
+    "/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ModelFactory/ModelFactory.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ModelFactory/ModelFactory.csproj",
+        "projectName": "ModelFactory",
+        "projectPath": "/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ModelFactory/ModelFactory.csproj",
+        "packagesPath": "/Users/saurabhnautiyal/.nuget/packages/",
+        "outputPath": "/Users/saurabhnautiyal/RiderProjects/ConsoleApp1/ModelFactory/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/saurabhnautiyal/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net47"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net47": {
+            "targetAlias": "net47",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net47": {
+          "targetAlias": "net47",
+          "dependencies": {
+            "Microsoft.Extensions.Caching.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[6.0.0-preview.3.21201.4, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )",
+              "autoReferenced": true
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Library/Frameworks/Mono.framework/Versions/6.12.0/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
