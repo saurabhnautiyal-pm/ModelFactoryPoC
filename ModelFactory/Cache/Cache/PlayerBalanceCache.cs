@@ -1,30 +1,23 @@
-using System;
-using System.Security.Cryptography.X509Certificates;
-using Microsoft.Extensions.Caching.Memory;
-using ModelFactory.Cache.Core;
+using ModelFactory.Cache.Factory;
 using ModelFactory.Model.Balance;
 
 namespace ModelFactory.Cache.Cache
 {
-    public class PlayerBalanceCache : ICacheEntryOption <IPlayerBalanceModel> , ICacheItem
+    public class PlayerBalanceCache : Cache <IPlayerBalanceModel>
     {
-        public PlayerBalanceCache()
+        private readonly ICacheFactory _factory;
+        private readonly ICoreTechContext _coreTechContext;
+
+        public PlayerBalanceCache(ICacheFactory factory, ICoreTechContext coreTechContext)
         {
-            AbsoluteExpiryTime = 10;
-            SlidingExpiryTime = 20;
+            _factory = factory;
+            _coreTechContext = coreTechContext;
         }
 
-        public IPlayerBalanceModel Create(ICacheEntry item)
+        protected override IPlayerBalanceModel CreateModel()
         {
-            item.AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(AbsoluteExpiryTime);
-            item.SlidingExpiration = TimeSpan.FromMinutes( SlidingExpiryTime);
-            
-            IPlayerBalanceModel balance = new PlayerBalanceModel();
+            IPlayerBalanceModel balance = new PlayerBalanceModel(_factory, _coreTechContext.AnalyticsEvents);
             return balance;
         }
-
-        public float AbsoluteExpiryTime { get; set; }
-        public float SlidingExpiryTime { get; set; }
-        
     }
 }      

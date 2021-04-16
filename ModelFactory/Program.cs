@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Configuration;
-using System.Reflection;
 using ModelFactory.Cache.Factory;
 using ModelFactory.Model.Player;
 
@@ -10,7 +8,8 @@ namespace ModelFactory
     {
         static void Main(string[] args)
         {
-            CacheFactory factory = new CacheFactory();
+            ICoreTechContext context = new CoreTechContext();
+            CacheFactory factory = new CacheFactory(context);
             var model = factory.Get<IPlayerModel>();
             
             model.Id = 10;
@@ -18,7 +17,7 @@ namespace ModelFactory
             
             var model2 = factory.Get<IPlayerModel>();
             
-            Console.WriteLine($"Current balance is {model2.Name}");
+            Console.WriteLine($" {model2.Id} {model2.Name}");
 
         }
     }

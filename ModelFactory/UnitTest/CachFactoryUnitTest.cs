@@ -1,10 +1,7 @@
-using Microsoft.Extensions.Caching.Memory;
 using ModelFactory.Cache.Factory;
 using ModelFactory.Model.Player;
-using ModelFactory.Service;
 using ModelFactory.Service.Balance;
 using ModelFactory.Service.Slot;
-using Moq;
 using NUnit.Framework;
 
 namespace ModelFactory.UnitTest
@@ -16,7 +13,9 @@ namespace ModelFactory.UnitTest
         [SetUp]
         public void Setup()
         {
-            _cacheFactory = new CacheFactory();
+            ICoreTechContext context = new CoreTechContext();
+            CacheFactory factory = new CacheFactory(context);
+            _cacheFactory = new CacheFactory(context);
         }
 
         [Test]

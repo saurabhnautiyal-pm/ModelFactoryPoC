@@ -1,24 +1,23 @@
-using Microsoft.Extensions.Caching.Memory;
-using ModelFactory.Cache.Core;
+using ModelFactory.Cache.Factory;
 using ModelFactory.Model.Player;
 
 namespace ModelFactory.Cache.Cache
 {
-    public class PlayerModelCache : ICacheEntryOption <IPlayerModel> , ICacheItem
+    public class PlayerModelCache : Cache<IPlayerModel>
     {
-        public PlayerModelCache()
-        {
-            AbsoluteExpiryTime = 10;
-            SlidingExpiryTime = 20;
-        }
-        public IPlayerModel Create(ICacheEntry item) 
-        {
-            item.Value = new PlayerModel();
-            return (IPlayerModel) item.Value;
+        private readonly ICacheFactory _factory;
+        private readonly ICoreTechContext _coreTechContext;
+
+        public PlayerModelCache(ICacheFactory factory , ICoreTechContext coreTechContext)
+        { 
+            _factory = factory;
+            _coreTechContext = coreTechContext;
+          
         }
 
-        public float AbsoluteExpiryTime { get; set; }
-        public float SlidingExpiryTime { get; set; }
-        
+        protected override IPlayerModel CreateModel()
+        {
+            return new PlayerModel(_factory, _coreTechContext.NetworkReachability);
+        }
     }
 }
